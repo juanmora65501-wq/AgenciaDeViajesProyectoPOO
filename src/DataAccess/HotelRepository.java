@@ -1,18 +1,46 @@
 package DataAccess;
 
 import Models.Hotel;
-import com.google.gson.reflect.TypeToken;
-import java.lang.reflect.Type;
+import java.util.List;
+import java.util.ArrayList;
 
-public class HotelRepository extends JsonRepository<Hotel> {
-
-    private static final String FILE = "data/hoteles.json";
+public class HotelRepository {
+    private IDataAccess<Hotel> dataAccess;
 
     public HotelRepository() {
-        super(FILE, getListType());
+        this.dataAccess = new JsonRepository<>("DataAccess/hotel.json", Hotel.class);
     }
 
-    private static Type getListType() {
-        return new TypeToken<java.util.List<Hotel>>() {}.getType();
+    public HotelRepository(IDataAccess<Hotel> dataAccess) {
+        this.dataAccess = dataAccess;
+    }
+
+    public List<Hotel> getAllHoteles() {
+        return dataAccess.findAll();
+    }
+
+    public Hotel findHotelById(String id) {
+        return dataAccess.findById(id);
+    }
+
+    public void saveHotel(Hotel item) {
+        dataAccess.save(item);
+    }
+
+    public void deleteHotel(String id) {
+        dataAccess.delete(id);
+    }
+    
+    public List<Hotel> findHotelesByMunicipioId(String municipioId) {
+        List<Hotel> hoteles = getAllHoteles();
+        List<Hotel> result = new ArrayList<>();
+
+        for (Hotel h : hoteles) {
+            if (h.getMunicipioId() != null && h.getMunicipioId().equals(municipioId)) {
+                result.add(h);
+            }
+        }
+
+        return result;
     }
 }

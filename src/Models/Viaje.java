@@ -1,7 +1,8 @@
 package Models;
 
 public class Viaje {
-
+    
+    private String id;
     private String fechaInicio;    // YYYY-MM-DD
     private String fechaFin;       // YYYY-MM-DD
 
@@ -9,7 +10,8 @@ public class Viaje {
 
     public Viaje() {}
 
-    public Viaje(String fechaInicio, String fechaFin, double costoTotal) {
+    public Viaje(String id,String fechaInicio, String fechaFin, double costoTotal) {
+        this.id = id;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.costoTotal = costoTotal;
@@ -24,4 +26,13 @@ public class Viaje {
     public double getCostoTotal() { return costoTotal; }
     public void setCostoTotal(double costoTotal) { this.costoTotal = costoTotal; }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+    
+    
 }

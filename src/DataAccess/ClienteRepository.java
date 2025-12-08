@@ -1,18 +1,32 @@
 package DataAccess;
 
 import Models.Cliente;
-import com.google.gson.reflect.TypeToken;
-import java.lang.reflect.Type;
+import java.util.List;
 
-public class ClienteRepository extends JsonRepository<Cliente> {
-
-    private static final String FILE = "data/clientes.json";
+public class ClienteRepository {
+    private IDataAccess<Cliente> dataAccess;
 
     public ClienteRepository() {
-        super(FILE, getListType());
+        this.dataAccess = new JsonRepository<>("DataAccess/cliente.json", Cliente.class);
     }
 
-    private static Type getListType() {
-        return new TypeToken<java.util.List<Cliente>>() {}.getType();
+    public ClienteRepository(IDataAccess<Cliente> dataAccess) {
+        this.dataAccess = dataAccess;
+    }
+
+    public List<Cliente> getAllClientes() {
+        return dataAccess.findAll();
+    }
+
+    public Cliente findClientesById(String id) {
+        return dataAccess.findById(id);
+    }
+
+    public void saveCliente(Cliente item) {
+        dataAccess.save(item);
+    }
+
+    public void deleteCliente(String id) {
+        dataAccess.delete(id);
     }
 }

@@ -1,18 +1,32 @@
 package DataAccess;
 
 import Models.Guia;
-import com.google.gson.reflect.TypeToken;
-import java.lang.reflect.Type;
+import java.util.List;
 
-public class GuiaRepository extends JsonRepository<Guia> {
-
-    private static final String FILE = "data/guias.json";
+public class GuiaRepository {
+    private IDataAccess<Guia> dataAccess;
 
     public GuiaRepository() {
-        super(FILE, getListType());
+        this.dataAccess = new JsonRepository<>("DataAccess/guia.json", Guia.class);
     }
 
-    private static Type getListType() {
-        return new TypeToken<java.util.List<Guia>>() {}.getType();
+    public GuiaRepository(IDataAccess<Guia> dataAccess) {
+        this.dataAccess = dataAccess;
+    }
+
+    public List<Guia> getAllGuias() {
+        return dataAccess.findAll();
+    }
+
+    public Guia findGuiaById(String id) {
+        return dataAccess.findById(id);
+    }
+
+    public void saveGuia(Guia item) {
+        dataAccess.save(item);
+    }
+
+    public void deleteGuia(String id) {
+        dataAccess.delete(id);
     }
 }
