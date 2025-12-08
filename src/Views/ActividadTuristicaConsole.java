@@ -1,22 +1,22 @@
 package Views;
 
-import Controllers.UsuarioController;
-import Models.Usuario;
+import Controllers.ActividadTuristicaController;
+import Models.ActividadTuristica;
 import java.util.List;
 import java.util.Scanner;
 
-public class UsuarioConsole {
-    private UsuarioController controller;
+public class ActividadTuristicaConsole {
+    private ActividadTuristicaController controller;
     private Scanner scanner;
 
-    public UsuarioConsole() {
-        this.controller = new UsuarioController();
+    public ActividadTuristicaConsole() {
+        this.controller = new ActividadTuristicaController();
         this.scanner = new Scanner(System.in);
     }
 
     public void showMenu() {
         while (true) {
-            System.out.println("\n=== USER MANAGEMENT ===");
+            System.out.println("\n=== ACTIVITY MANAGEMENT ===");
             System.out.println("1. List all");
             System.out.println("2. Add new");
             System.out.println("3. Update");
@@ -38,11 +38,11 @@ public class UsuarioConsole {
 
     private void listAll() {
         System.out.println("\n--- ALL ITEMS ---");
-        List<Usuario> items = controller.getAllUsuarios();
+        List<ActividadTuristica> items = controller.getAllActividades();
         if (items.isEmpty()) {
             System.out.println("No items found.");
         } else {
-            for (Usuario item : items) {
+            for (ActividadTuristica item : items) {
                 System.out.println("ID: " + item.getId() + " | Name: " + item.getNombre());
             }
         }
@@ -52,17 +52,15 @@ public class UsuarioConsole {
         System.out.println("\n--- ADD NEW ITEM ---");
         System.out.print("Enter nombre: ");
         String nombre = scanner.nextLine();
-        System.out.print("Enter apellido: ");
-        String apellido = scanner.nextLine();
-        System.out.print("Enter correo: ");
-        String correo = scanner.nextLine();
-        System.out.print("Enter telefono: ");
-        String telefono = scanner.nextLine();
-        System.out.print("Enter rol: ");
-        String rol = scanner.nextLine();
-        System.out.print("Enter contrasena: ");
-        String contrasena = scanner.nextLine();
-        boolean success = controller.addUsuario(nombre, apellido, correo, telefono, rol, contrasena);
+        System.out.print("Enter descripcion: ");
+        String descripcion = scanner.nextLine();
+        System.out.print("Enter municipioId: ");
+        String municipioId = scanner.nextLine();
+        System.out.print("Enter duracion: ");
+        String duracion = scanner.nextLine();
+        System.out.print("Enter costo: ");
+        double costo = readDoubleInput();
+        boolean success = controller.addActividad(nombre, descripcion, municipioId, duracion, costo);
         System.out.println(success ? "Item added successfully." : "Failed to add item.");
     }
 
@@ -70,24 +68,21 @@ public class UsuarioConsole {
         System.out.println("\n--- UPDATE ITEM ---");
         System.out.print("Enter item ID: ");
         String id = scanner.nextLine();
-        Usuario item = controller.getUsuarioById(id);
+        ActividadTuristica item = controller.getActividadById(id);
         if (item == null) {
             System.out.println("Item not found.");
             return;
         }
         System.out.print("Enter new nombre: ");
         String nombre = scanner.nextLine();
-        System.out.print("Enter new apellido: ");
-        String apellido = scanner.nextLine();
-        System.out.print("Enter new correo: ");
-        String correo = scanner.nextLine();
-        System.out.print("Enter new telefono: ");
-        String telefono = scanner.nextLine();
-        System.out.print("Enter new rol: ");
-        String rol = scanner.nextLine();
-        System.out.print("Enter new contrasena: ");
-        String contrasena = scanner.nextLine();
-        boolean success = controller.updateUsuario(id, nombre.isEmpty() ? null : nombre, apellido.isEmpty() ? null : apellido, correo.isEmpty() ? null : correo, telefono.isEmpty() ? null : telefono, rol.isEmpty() ? null : rol, contrasena.isEmpty() ? null : contrasena);
+        System.out.print("Enter new descripcion: ");
+        String descripcion = scanner.nextLine();
+        System.out.print("Enter new duracion: ");
+        String duracion = scanner.nextLine();
+        System.out.print("Enter new costo: ");
+        String costoInput = scanner.nextLine();
+        Double costo = costoInput.isEmpty() ? null : Double.parseDouble(costoInput);
+        boolean success = controller.updateActividad(id, nombre.isEmpty() ? null : nombre, descripcion.isEmpty() ? null : descripcion, duracion.isEmpty() ? null : duracion, costo);
         System.out.println(success ? "Item updated successfully." : "Failed to update item.");
     }
 
@@ -95,7 +90,7 @@ public class UsuarioConsole {
         System.out.println("\n--- DELETE ITEM ---");
         System.out.print("Enter item ID: ");
         String id = scanner.nextLine();
-        boolean success = controller.deleteUsuario(id);
+        boolean success = controller.deleteActividad(id);
         System.out.println(success ? "Item deleted successfully." : "Failed to delete item.");
     }
 
@@ -103,6 +98,16 @@ public class UsuarioConsole {
         while (true) {
             try {
                 return Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.print("Invalid input: ");
+            }
+        }
+    }
+
+    private double readDoubleInput() {
+        while (true) {
+            try {
+                return Double.parseDouble(scanner.nextLine());
             } catch (NumberFormatException e) {
                 System.out.print("Invalid input: ");
             }
