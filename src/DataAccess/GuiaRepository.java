@@ -7,7 +7,7 @@ public class GuiaRepository {
     private IDataAccess<Guia> dataAccess;
 
     public GuiaRepository() {
-        this.dataAccess = new JsonRepository<>("DataAccess/guia.json", Guia.class);
+        this.dataAccess = new JsonRepository<>("guia.json", Guia.class);
     }
 
     public GuiaRepository(IDataAccess<Guia> dataAccess) {

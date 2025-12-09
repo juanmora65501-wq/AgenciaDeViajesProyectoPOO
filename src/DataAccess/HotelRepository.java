@@ -1,14 +1,14 @@
 package DataAccess;
 
 import Models.Hotel;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 public class HotelRepository {
     private IDataAccess<Hotel> dataAccess;
 
     public HotelRepository() {
-        this.dataAccess = new JsonRepository<>("DataAccess/hotel.json", Hotel.class);
+        this.dataAccess = new JsonRepository<>("hotel.json", Hotel.class);
     }
 
     public HotelRepository(IDataAccess<Hotel> dataAccess) {

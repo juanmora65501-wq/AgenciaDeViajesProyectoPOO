@@ -7,14 +7,14 @@ package DataAccess;
 
 
 import Models.ActividadTuristica;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ActividadTuristicaRepository {
     private IDataAccess<ActividadTuristica> dataAccess;
 
     public ActividadTuristicaRepository() {
-        this.dataAccess = new JsonRepository<>("DataAccess/actividadTuristica.json", ActividadTuristica.class);
+        this.dataAccess = new JsonRepository<>("actividadTuristica.json", ActividadTuristica.class);
     }
 
     public ActividadTuristicaRepository(IDataAccess<ActividadTuristica> dataAccess) {

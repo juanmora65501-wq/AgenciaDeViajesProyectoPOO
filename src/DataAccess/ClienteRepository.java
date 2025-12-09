@@ -7,7 +7,7 @@ public class ClienteRepository {
     private IDataAccess<Cliente> dataAccess;
 
     public ClienteRepository() {
-        this.dataAccess = new JsonRepository<>("DataAccess/cliente.json", Cliente.class);
+        this.dataAccess = new JsonRepository<>("cliente.json", Cliente.class);
     }
 
     public ClienteRepository(IDataAccess<Cliente> dataAccess) {

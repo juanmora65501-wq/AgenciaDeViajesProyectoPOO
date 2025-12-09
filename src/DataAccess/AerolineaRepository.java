@@ -12,7 +12,7 @@ public class AerolineaRepository {
     private IDataAccess<Aerolinea> dataAccess;
 
     public AerolineaRepository() {
-        this.dataAccess = new JsonRepository<>("DataAccess/aerolinea.json", Aerolinea.class);
+        this.dataAccess = new JsonRepository<>("aerolinea.json", Aerolinea.class);
     }
 
     public AerolineaRepository(IDataAccess<Aerolinea> dataAccess) {

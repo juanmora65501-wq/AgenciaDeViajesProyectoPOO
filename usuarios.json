@@ -1,0 +1,11 @@
+[
+  {
+    "id": "ID-1765234416381",
+    "nombre": "Pedro",
+    "apellido": "Neto",
+    "correo": "pedro@gmail.com",
+    "telefono": "123",
+    "rol": "Client",
+    "contrasena": "Gemelo123"
+  }
+]
