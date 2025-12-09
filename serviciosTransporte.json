@@ -1,1 +1,12 @@
-[]
+[
+	{
+		"id": "ST-001",
+		"tipo": "Carro",
+		"vehiculoId": "CAR-001"
+	},
+	{
+		"id": "ST-002",
+		"tipo": "Aeronave",
+		"vehiculoId": "AV-001"
+	}
+]

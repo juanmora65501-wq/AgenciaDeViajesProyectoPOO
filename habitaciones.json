@@ -1,1 +1,16 @@
-[]
+[
+	{
+		"id": "HAB-001",
+		"hotelId": "HOTEL-001",
+		"tipo": "Doble",
+		"capacidad": 2,
+		"precio": 120.0
+	},
+	{
+		"id": "HAB-002",
+		"hotelId": "HOTEL-002",
+		"tipo": "Suite",
+		"capacidad": 4,
+		"precio": 250.0
+	}
+]

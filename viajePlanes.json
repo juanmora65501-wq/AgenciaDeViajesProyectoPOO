@@ -1,1 +1,12 @@
-[]
+[
+	{
+		"id": "VP-001",
+		"viajeId": "VIAJE-001",
+		"planId": "PLAN-001"
+	},
+	{
+		"id": "VP-002",
+		"viajeId": "VIAJE-002",
+		"planId": "PLAN-002"
+	}
+]

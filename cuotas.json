@@ -1,1 +1,14 @@
-[]
+[
+	{
+		"id": "CUOTA-001",
+		"viajeId": "VIAJE-001",
+		"monto": 17500.0,
+		"fechaPago": "2025-12-10"
+	},
+	{
+		"id": "CUOTA-002",
+		"viajeId": "VIAJE-002",
+		"monto": 12500.0,
+		"fechaPago": "2026-01-05"
+	}
+]

@@ -1,1 +1,12 @@
-[]
+[
+	{
+		"id": "PA-001",
+		"planId": "PLAN-001",
+		"actividadTuristicaId": "ACT-001"
+	},
+	{
+		"id": "PA-002",
+		"planId": "PLAN-002",
+		"actividadTuristicaId": "ACT-002"
+	}
+]

@@ -1,1 +1,14 @@
-[]
+[
+	{
+		"id": "IT-001",
+		"trayectoId": "TRAY-001",
+		"viajeId": "VIAJE-001",
+		"fecha": "2025-12-21"
+	},
+	{
+		"id": "IT-002",
+		"trayectoId": "TRAY-002",
+		"viajeId": "VIAJE-002",
+		"fecha": "2026-01-11"
+	}
+]

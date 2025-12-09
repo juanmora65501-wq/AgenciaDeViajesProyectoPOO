@@ -1,1 +1,16 @@
-[]
+[
+	{
+		"id": "TRAY-001",
+		"origenId": "MUN-001",
+		"destinoId": "MUN-002",
+		"servicioTransporteId": "ST-001",
+		"duracionHoras": 2
+	},
+	{
+		"id": "TRAY-002",
+		"origenId": "MUN-002",
+		"destinoId": "MUN-001",
+		"servicioTransporteId": "ST-002",
+		"duracionHoras": 1
+	}
+]

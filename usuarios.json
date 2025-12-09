@@ -1,11 +1,29 @@
 [
   {
-    "id": "ID-1765234416381",
-    "nombre": "Pedro",
-    "apellido": "Neto",
-    "correo": "pedro@gmail.com",
-    "telefono": "123",
+    "id": "USR-001",
+    "nombre": "Ana",
+    "apellido": "García",
+    "correo": "ana.garcia@email.com",
+    "telefono": "555-1234",
     "rol": "Client",
-    "contrasena": "Gemelo123"
+    "contrasena": "pass123"
+  },
+  {
+    "id": "USR-002",
+    "nombre": "Luis",
+    "apellido": "Martínez",
+    "correo": "luis.martinez@email.com",
+    "telefono": "555-5678",
+    "rol": "Client",
+    "contrasena": "pass456"
+  },
+  {
+    "id": "USR-003",
+    "nombre": "Sofía",
+    "apellido": "Ruiz",
+    "correo": "sofia.ruiz@email.com",
+    "telefono": "555-8765",
+    "rol": "Guia",
+    "contrasena": "guia789"
   }
 ]

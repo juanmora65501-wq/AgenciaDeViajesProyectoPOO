@@ -1,1 +1,12 @@
-[]
+[
+	{
+		"id": "MUN-001",
+		"nombre": "Cartagena",
+		"departamento": "Bolívar"
+	},
+	{
+		"id": "MUN-002",
+		"nombre": "Medellín",
+		"departamento": "Antioquia"
+	}
+]

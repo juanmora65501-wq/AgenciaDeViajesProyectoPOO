@@ -1,7 +1,12 @@
 [
   {
-    "usuarioId": "ID-1765234416381",
-    "preferencias": "Playa",
-    "id": "ID-1765235359605"
+    "usuarioId": "USR-001",
+    "preferencias": "Playa, Montaña",
+    "id": "CLI-001"
+  },
+  {
+    "usuarioId": "USR-002",
+    "preferencias": "Aventura, Cultura",
+    "id": "CLI-002"
   }
 ]

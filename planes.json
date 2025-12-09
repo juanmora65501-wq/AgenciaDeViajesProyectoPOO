@@ -1,9 +1,16 @@
 [
   {
-    "id": "ID-1765234710892",
-    "nombre": "Combo Playa-Aquario",
-    "descripcion": "describcion",
+    "id": "PLAN-001",
+    "nombre": "Aventura Caribe",
+    "descripcion": "Viaje de aventura en el Caribe con actividades acuáticas y excursiones.",
     "preestablecido": true,
-    "costoBase": 30000.0
+    "costoBase": 35000.0
+  },
+  {
+    "id": "PLAN-002",
+    "nombre": "Cultura Andina",
+    "descripcion": "Recorrido cultural por pueblos andinos y museos.",
+    "preestablecido": false,
+    "costoBase": 25000.0
   }
 ]

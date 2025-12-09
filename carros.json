@@ -1,1 +1,16 @@
-[]
+[
+	{
+		"id": "CAR-001",
+		"marca": "Toyota",
+		"modelo": "Corolla",
+		"anio": 2022,
+		"capacidad": 5
+	},
+	{
+		"id": "CAR-002",
+		"marca": "Chevrolet",
+		"modelo": "Spark",
+		"anio": 2021,
+		"capacidad": 4
+	}
+]

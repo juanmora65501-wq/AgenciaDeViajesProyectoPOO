@@ -1,1 +1,16 @@
-[]
+[
+	{
+		"id": "HI-001",
+		"habitacionId": "HAB-001",
+		"viajeId": "VIAJE-001",
+		"fechaEntrada": "2025-12-20",
+		"fechaSalida": "2025-12-27"
+	},
+	{
+		"id": "HI-002",
+		"habitacionId": "HAB-002",
+		"viajeId": "VIAJE-002",
+		"fechaEntrada": "2026-01-10",
+		"fechaSalida": "2026-01-17"
+	}
+]

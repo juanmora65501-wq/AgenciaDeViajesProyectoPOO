@@ -1,1 +1,8 @@
-[]
+[
+	{
+		"id": "AG-001",
+		"guiaId": "GUIA-001",
+		"actividadTuristicaId": "ACT-001",
+		"fecha": "2025-12-15"
+	}
+]

@@ -1,1 +1,14 @@
-[]
+[
+	{
+		"id": "ACT-001",
+		"nombre": "Tour por el centro histórico",
+		"municipioId": "MUN-001",
+		"costo": 50000
+	},
+	{
+		"id": "ACT-002",
+		"nombre": "Excursión a la montaña",
+		"municipioId": "MUN-002",
+		"costo": 70000
+	}
+]

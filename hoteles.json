@@ -1,1 +1,14 @@
-[]
+[
+	{
+		"id": "HOTEL-001",
+		"nombre": "Hotel Sol y Mar",
+		"direccion": "Calle 1 #23-45, Cartagena",
+		"telefono": "555-1111"
+	},
+	{
+		"id": "HOTEL-002",
+		"nombre": "Hotel Montaña Azul",
+		"direccion": "Cra 10 #12-34, Medellín",
+		"telefono": "555-2222"
+	}
+]
